@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>illHUEminate</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+        crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+        crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+
+<body>
+    <div id="background">
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <h1 class="display-4">
+                    <span class="rainbow">ill HUE minate</span>
+                    <div class="about"> illHUEminate is a customer color selector using images to customize your
+                        Phillips Hue lighting system. You can select a stored image from our carousel or if you like
+                        enter a link to your own image to see color selections. When you find a color swatch you like
+                        simply click on it and your bulb will change automatically to that color. <a href="https://www.youtube.com/watch?v=LlBv3kgY2jA&feature=youtu.be">Click here for a video demo.</a>
+                        <br>
+                        (Please make sure the imageURL has an extension of .jpeg .jpg or .png .gif and that you have access to the image directly online.)
+                    </div>
+                </h1>
+                <p class="lead"></p>
+            </div>
+        </div>
+
+    <div class="container">
+        <div class="owl-carousel owl-theme">
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="rainbow2">Insert a URL to an image you would like to pallet</div>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+        </div>
+           <input type="url" placeholder="http://anyexamplephoto.jpg" pattern="https?:\/\/.*\.(jpg|jpeg|png|gif)" class="form-control" aria-label="Sizing example input" id="userInput" aria-describedby="inputGroup-sizing-default">
+        </div>
+            <a id="submit" href="#">Submit image URL for custom pallet</a>
+        </div>
+
+        <div class="container">
+            <input type="range" min="1" max="254" value="127" step="10" onchange="sliderChange(this.value)" id="slider" />
+        </div>
+
+        <div class="container">
+        </div>
+
+        <div class="container" id="palletOut">
+        </div>
+
+        <footer class="footer">
+            © Copyright March 2019: Phuoc Phan, Sarah Sakhi, Paul Xu and Holland Gronau
+        </footer>
+</div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.6/firebase.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="assets/js/firebase.js"></script>
+    <script src="assets/js/carousel.js"></script>
+    <script src="assets/js/colorAPI.js"></script>
+    <script src="assets/js/phue.js"></script>
+</body>
+
+</html>
